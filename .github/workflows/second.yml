@@ -1,0 +1,13 @@
+name: first workflow
+on:
+  push:
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+       - name: checkout repositry
+         uses: actions/checkout@v4
+       - name: print welcome
+         run: echo "welcome to build"
+       - name: print present working directory
+         run: pwd
